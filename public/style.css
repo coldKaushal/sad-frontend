@@ -1,5 +1,31 @@
+body{
+    
+}
+.wrapper{
+    margin-top: 0px;
+    background-image: url('images/Background.png');
+    background-size: 100% auto;
+}
 
-
+nav{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 1rem;
+    font-family: Arista;
+    font-size: large;
+    font-weight: 200;
+}
 .enter-data{
     margin-top: 50px;
 }
@@ -12,4 +38,242 @@
     margin-bottom: 10px;
     width: 100%;
     font-size: xx-large;
+}
+
+@font-face {
+    font-family: highSlyvester;
+    src: url('fonts/HIGHSYLVESTER-YZ3BJ.TTF');
+}
+@font-face {
+    font-family: Arista;
+    src: url('fonts/ARISTA2.0\ ALTERNATE\ LIGHT.TTF');
+}
+@font-face {
+    font-family: Impact;
+    src: url('fonts/IMPACT.TTF');
+    font-weight: 200;
+}
+@font-face {
+    font-family: Segoe;
+    src: url('fonts/segoesc.ttf');
+}
+@font-face {
+    font-family: Arista-Light;
+    src: url('fonts/ARISTA2.0\ LIGHT.TTF');
+}
+
+.maintext-1{
+    font-family: highSlyvester;
+    font-size: 80px;
+    letter-spacing: -5;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+.maintext-2{
+    font-family: Impact;
+    font-size: 150px;
+    letter-spacing: -25;
+    color: white;
+    margin-top: -50px;
+    position: absolute;
+    margin-top: -100px;
+
+}
+
+.section-2{
+    margin-top: 350px;
+}
+
+.section-2 .line-1{
+    font-family: Segoe;
+}
+.section-2 .line-2{
+    font-family: Impact;
+    font-size: 80px;
+    margin-top: -50px;
+    margin-left: -10px;
+}
+.section-2 .line-3{
+    font-family: Segoe;
+    margin-top: -40px;
+    margin-left: 220px;
+}
+
+.section-2 img{
+    margin-top: 10px;
+    height: 200px;
+    width: auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.section-2 img:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+.section-2 .row-2{
+    margin-top: -160px;
+    align-items: right;
+    position: relative;
+}
+.row-2 .inner-div{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: auto;
+    right: 0;
+}
+.row-2 p{
+    font-family: Arista;
+    line-height: 20%;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+/* *************************   SHOW RESULT PAGE  ************************** */
+
+.result-wrapper{
+    margin-top: 0px;
+    background-image: url('images/Background-Landing-Page-Scrolled.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.result-content{
+    margin-top: 70px;
+
+}
+.result-content .left{
+    border-right: 2px solid #446945;
+}
+
+.result-content .right{
+    justify-content: right;
+}
+.result-content .outer-circle {
+    position: relative;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #ffffff;
+    text-align: center;
+    
+}
+
+.outer-circle p{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 130px;
+  font-family: Arista;
+}
+
+.result-content .inner-circle{
+    background-image: linear-gradient(
+                     to bottom, #9ee29f 0%,
+                     #009d1a 100%);
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            right: -10px;
+            left: -10px;
+            z-index: -1;
+            border-radius: inherit;
+            box-shadow: 0 0 30px 15px #a1ce9d;
+}
+
+.score-text{
+    font-family: Arista-Light;
+    margin: none;
+    padding: none;
+    text-align: center;
+    font-size: 25px;
+}
+.score-text-wrapper{
+    margin-top: 30px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 105%;
+}
+
+
+
+
+/* ***************Police******************************* */
+
+.police-wrapper{
+    background-image: url('images/Background-Landing-Page-Scrolled.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    /* font-family: Arista; */
+}
+
+.police-wrapper .content{
+    margin-top: 100px;
+}
+.success-text{
+    size: 10px;
+    color: green;
+}
+.police-wrapper .add-data{
+    padding: 20px;
+    border-style: solid;
+    border-color: green;
+    border-width: 1px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px green;
+}
+.police-wrapper .btn{
+    margin-top: 10px;
+}
+
+.locate-wrapper{
+    padding: 20px;
+    border-style: solid;
+    border-color: green;
+    border-width: 1px;
+    border-radius: 10px;
+}
+.locate-wrapper .title{
+    font-size: 35px;
+
+}
+.locate-options{
+    text-align: center;
+}
+
+.locate-options .btns{
+    justify-content: center;
+    display: flex;
+}
+.btns-text{
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.history-wrapper{
+    margin-top: 10px;
+    padding: 20px;
+    border-style: solid;
+    border-color: green;
+    border-width: 1px;
+    border-radius: 10px;
+}
+.history-wrapper .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.history-wrapper .title{
+    font-size: 35px;
 }

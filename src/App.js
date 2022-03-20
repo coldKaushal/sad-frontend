@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./landing-page";
 import AddData from "./addData";
-import ShowClusters from "./show-clusters";
-
+import Police from "./police";
+import ShowResult from "./result";
 
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage/>} />
       <Route path="/addData" element={<AddData/>} />
-      <Route path="/showCluster" element={<ShowClusters/>} />
+      <Route path="/police" element={<Police/>} />
+      <Route path="/showResult" element={<ShowResult/>} />
     </Routes>
     </BrowserRouter>
     )
