@@ -2,6 +2,10 @@
   "name": "sad-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "8.5.0",
+    "node": "14.17.5"
+  },
   "dependencies": {
     "@googlemaps/markerclusterer": "^1.0.24",
     "@testing-library/jest-dom": "^5.16.2",
