@@ -13,7 +13,7 @@ function AddData(){
             redirect: 'follow'
           };
           
-          fetch("http://localhost:4000/enterData?latitude="+lat+"&longitude="+long+"&date="+newDate, requestOptions)
+          fetch("https://thawing-ridge-27369.herokuapp.com/enterData?latitude="+lat+"&longitude="+long+"&date="+newDate, requestOptions)
             .then(response => response.text())
             .then(result => {
                 if(result!='error'){

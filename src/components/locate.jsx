@@ -22,7 +22,7 @@ function Locate(props) {
             redirect: 'follow'
         };
 
-        fetch("http://localhost:4000/centers?latitude=" + latitude + "&longitude=" + longitude + "&centers=" + count, requestOptions)
+        fetch("https://thawing-ridge-27369.herokuapp.com/centers?latitude=" + latitude + "&longitude=" + longitude + "&centers=" + count, requestOptions)
             .then(response => response.text())
             .then(result => {
                 if (result != 'error' && result != 'no') {

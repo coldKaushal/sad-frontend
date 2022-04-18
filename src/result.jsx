@@ -23,7 +23,7 @@ function ShowResult() {
         console.warn(`ERROR(${err.code}): ${err.message}`);
     }
 
-    const [score, updateScore] = React.useState(0);
+    const [score, updateScore] = React.useState(10);
 
     React.useEffect(() => {
 
@@ -33,11 +33,16 @@ function ShowResult() {
         };
         navigator.geolocation.getCurrentPosition(success, error, options);
         const date = new Date().getTime();
-        fetch("http://localhost:4000/safetyScore?latitude=" + latitude + "&longitude=" + longitude + "&date=" + date, requestOptions)
+        fetch("https://thawing-ridge-27369.herokuapp.com/safetyScore?latitude=" + latitude + "&longitude=" + longitude + "&date=" + date, requestOptions)
             .then(response => response.text())
             .then(result => {
                 if(result!='error'){
-                    updateScore(Number(result));
+                    console.log(result);
+                    if(result!=NaN){
+                        updateScore(Number(result));
+                    }else{
+                        updateScore(10);
+                    }
                 }
             })
             .catch(error => console.log('error', error));
@@ -63,7 +68,7 @@ function ShowResult() {
                             </div>
                         </div>
                         <div className="score-text-wrapper">
-                            <p className="score-text">Security score is based on the cases reported in the last month</p>
+                            <p className="score-text">{score<4?"The area is not safe, please try to avoid the area":score<7?"The area is risky, be on you guard while travelling via this route":"The area is safe but still be cautious"}</p>
                         </div>
                     </div>
                 </div>

@@ -204,7 +204,10 @@ nav ul li{
     margin-right: auto;
     line-height: 105%;
 }
-
+.no_case{
+    font-size: 50px;
+    margin-top: 10px;
+}
 
 
 

@@ -37,6 +37,7 @@ function BarChart() {
   
   
   const [chartData, updateData] = React.useState([]);
+  const [len, uLen] = React.useState(0);
 
   React.useEffect(()=>{
 
@@ -46,11 +47,12 @@ function BarChart() {
     };
     navigator.geolocation.getCurrentPosition(success, error, options);
     const date = new Date().getTime();
-    fetch("http://localhost:4000/checkSafety?latitude="+latitude+"&longitude="+longitude+"&date="+date, requestOptions)
+    fetch("https://thawing-ridge-27369.herokuapp.com/checkSafety?latitude="+latitude+"&longitude="+longitude+"&date="+date, requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result);
         updateData(JSON.parse(result));
+        uLen(result.length);
       })
       .catch(error => console.log('error', error));
 
@@ -63,23 +65,24 @@ function BarChart() {
   
 
 
-    return (
-      <Paper>
-        <Chart
-          data={chartData}
-          rotated
-        >
-          <ArgumentAxis />
-          <ValueAxis />
-          <BarSeries
-            valueField="cases"
-            argumentField="Date"
-            color="green"
-          />
-          <Title text="Assault Cases reported Last Month" />
-          <Animation />
-        </Chart>
-      </Paper>
+    return ( chartData.length!=0?<Paper>
+      <Chart
+        data={chartData}
+        rotated
+      >
+        <ArgumentAxis />
+        <ValueAxis />
+        <BarSeries
+          valueField="cases"
+          argumentField="Date"
+          color="green"
+        />
+        <Title text="Assault Cases reported Last Month" />
+        <Animation />
+      </Chart>
+    </Paper>:<div className='no_case'>
+      No case has been reported in this area in the past month within 3 hours of duration from the current date and time.
+    </div>
     );
 }
 
