@@ -19,7 +19,7 @@ function History(props) {
             
         };
 
-        fetch("https://thawing-ridge-27369.herokuapp.com/shistory?latitude=" + props.latitude + "&longitude=" + props.longitude, requestOptions)
+        fetch("https://glacial-mountain-69918.herokuapp.com/shistory?latitude=" + props.latitude + "&longitude=" + props.longitude, requestOptions)
             .then(response => response.text())
             .then(result => {
                 console.log(JSON.parse(result));

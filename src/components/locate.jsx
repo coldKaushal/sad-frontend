@@ -16,13 +16,14 @@ function Locate(props) {
     }
     const [locations, updateLocations] = React.useState([]);
     function handleClick() {
-        
+        console.log(latitude);
+        console.log(longitude);
         var requestOptions = {
             method: 'POST',
-            redirect: 'follow'
+            redirect: 'follow'  
         };
 
-        fetch("https://thawing-ridge-27369.herokuapp.com/centers?latitude=" + latitude + "&longitude=" + longitude + "&centers=" + count, requestOptions)
+        fetch("https://glacial-mountain-69918.herokuapp.com/centers?latitude=" + latitude + "&longitude=" + longitude + "&centers=" + count, requestOptions)
             .then(response => response.text())
             .then(result => {
                 if (result != 'error' && result != 'no') {

@@ -31,7 +31,7 @@ date: ""});
       redirect: 'follow'
     };
     
-    fetch("https://thawing-ridge-27369.herokuapp.com/enterData?latitude="+data.latitude+"&longitude="+data.longitude+"&date="+data.date, requestOptions)
+    fetch("https://glacial-mountain-69918.herokuapp.com/enterData?latitude="+data.latitude+"&longitude="+data.longitude+"&date="+data.date, requestOptions)
       .then(response => response.text())
       .then(result => updateMessage(result))
       .catch(error => console.log('error', error));

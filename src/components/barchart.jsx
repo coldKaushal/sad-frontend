@@ -47,7 +47,7 @@ function BarChart() {
     };
     navigator.geolocation.getCurrentPosition(success, error, options);
     const date = new Date().getTime();
-    fetch("https://thawing-ridge-27369.herokuapp.com/checkSafety?latitude="+latitude+"&longitude="+longitude+"&date="+date, requestOptions)
+    fetch("https://glacial-mountain-69918.herokuapp.com/checkSafety?latitude="+latitude+"&longitude="+longitude+"&date="+date, requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result);

@@ -13,7 +13,7 @@ function AddData(){
             redirect: 'follow'
           };
           
-          fetch("https://thawing-ridge-27369.herokuapp.com/enterData?latitude="+lat+"&longitude="+long+"&date="+newDate, requestOptions)
+          fetch("https://glacial-mountain-69918.herokuapp.com/enterData?latitude="+lat+"&longitude="+long+"&date="+newDate, requestOptions)
             .then(response => response.text())
             .then(result => {
                 if(result!='error'){
